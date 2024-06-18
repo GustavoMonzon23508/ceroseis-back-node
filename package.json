@@ -1,0 +1,19 @@
+{
+  "name": "cero-seis-store",
+  "version": "1.0.0",
+  "description": "back end del e-commerce ceroseis store",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/GustavoMonzon23508/ceroseis-back-node.git"
+  },
+  "author": "Monzon-Garcia-Moyano-Amsler",
+  "license": "MIT",
+  "bugs": {
+    "url": "https://github.com/GustavoMonzon23508/ceroseis-back-node/issues"
+  },
+  "homepage": "https://github.com/GustavoMonzon23508/ceroseis-back-node#readme"
+}
