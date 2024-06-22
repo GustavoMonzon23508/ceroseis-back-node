@@ -15,5 +15,8 @@
   "bugs": {
     "url": "https://github.com/GustavoMonzon23508/ceroseis-back-node/issues"
   },
-  "homepage": "https://github.com/GustavoMonzon23508/ceroseis-back-node#readme"
+  "homepage": "https://github.com/GustavoMonzon23508/ceroseis-back-node#readme",
+  "dependencies": {
+    "express": "^4.19.2"
+  }
 }
