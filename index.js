@@ -1,1 +1,11 @@
-index.js
+const express = require ("express");
+const app = express();
+
+//http://localhost:3000/
+app.get("/",(req, res) => {
+    res.send("hola express!!!!!");
+});
+const PORT = 3000;
+
+app.listen(PORT, () => console.log(`http://localhost:${PORT}`));
+
