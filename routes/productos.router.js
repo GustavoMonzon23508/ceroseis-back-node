@@ -9,23 +9,14 @@ const productos = [
 const controller = require("../controllers/productos.controller");
 //  Prefijo: /productos
 router.get("/", controller.index);
+router.get("/:id", controller.show);
 
-router.get("/:id",(req, res) => {
-    console.log(req.params.id);
-
-    const producto = productos.find((elemento) => elemento.id == req.params.id);
-    if (!producto) {
-        return res.status(404).send({ error: "no existe el producto"})
-    }
-    res.json(producto);
-})
-
-router.post('/', (req, res) => {
+router.post("/", (req, res) => {
    //console.log(req.body);
    //res.send("POST");
    
    const producto = {
-    id: productos.length +1,
+    id: productos.length + 1,
     nombre: req.body.nombre,
     stock: req.body.stock,
    };
