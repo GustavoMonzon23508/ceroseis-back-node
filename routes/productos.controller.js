@@ -8,7 +8,7 @@ const index = (req, res) => {
         }
         res.json(rows);
     });
-    const show = (req, res) => { 
+const show = (req, res) => { 
       const { id } = req.params;
 
       const sql = "SELECT * FROM productos WHERE id = ?";
@@ -45,7 +45,7 @@ const update = (req, res) => {
           return res.status(500).json({error: "intente mas tarde"});          
       }  
       if (result.affectedRows == 0) {
-        return res.status(404).send({error; "no existe el producto"}); 
+        return res.status(404).send({error: "no existe el producto"}); 
       }   
       const producto = {...req.body, ...req.params }; 
       res.json(producto); 
