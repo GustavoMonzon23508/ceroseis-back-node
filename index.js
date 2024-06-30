@@ -13,7 +13,7 @@ app.use("/productos", require("./routes/productos.router"));
 
 //http://localhost:3000/
 app.get("/",(req, res) => {
-    res.send("hola express!!!!!");
+    res.send("hola express");
 });
 const PORT = 3000;
 
