@@ -8,6 +8,7 @@ const index = (req, res) => {
         }
         res.json(rows);
     });
+};
 const show = (req, res) => { 
       const { id } = req.params;
 
@@ -51,9 +52,9 @@ const update = (req, res) => {
       res.json(producto); 
     });
 
-} 
+}; 
 
-} 
+
 const destroy = (req, res) => { 
     const { id } = req.params;
 
