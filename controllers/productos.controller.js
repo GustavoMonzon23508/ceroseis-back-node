@@ -27,13 +27,13 @@ const show = (req, res) => {
 }; 
 const store = (req, res) => { 
   const { nombre, precio, stock } = req.body;
-    const sql = "INSERT INTO productos (id, nombre, caracteristicas, precio, stock, categoria) VALUE (?, ?, ?, ?, ?, ?)";
-  db.query(sql, [id, nombre, caracteristicas, precio, stock, categoria], (error, result) => {
-      if (error) {
-          return res.status(500).json({error: "intente mas tarde cod2"});          
+    const sql = "INSERT INTO productos (nombre, precio, stock) VALUE (?, ?, ?)";
+    db.query(sql, [nombre, precio, stock], (error, result) => {
+        if (error) {
+        return res.status(500).json({error: "intente mas tarde cod2"});          
       }      
-      const producto = {...req.body, id: result.insertId };
-      res.status(201).json(producto); 
+    const producto = {...req.body, id: result.insertId };
+    res.status(201).json(producto); 
     });   
 }; 
 const update = (req, res) => {
