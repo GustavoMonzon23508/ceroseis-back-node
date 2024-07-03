@@ -1,3 +1,5 @@
+require("dotenv").config();
+
 const express = require ("express");
 const app = express();
 
@@ -5,9 +7,7 @@ const app = express();
 
 app.use(express.json());
 
-// const productosRouter = require('./routes/productos.router');
-// app.use('/productos', productosRouter);
-
+app.use('/auth', require("./routes/auth.router"));
 app.use("/productos", require("./routes/productos.router"));
 
 
@@ -15,7 +15,7 @@ app.use("/productos", require("./routes/productos.router"));
 app.get("/",(req, res) => {
     res.send("hola express");
 });
-const PORT = 3000;
+const PORT = process.env.PORT || 3001;
 
 app.listen(PORT, () => console.log(`http://localhost:${PORT}`));
 
